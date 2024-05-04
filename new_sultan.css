@@ -1,0 +1,441 @@
+* {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+    
+}
+
+:root {
+    --text-color : #E4EFF0 ;
+    --main-color : #036493 ;
+    --second-color : #ACFD57 ;
+}
+
+::selection{
+    color: var(--main-color);
+    background-color: var(--second-color);
+}
+
+body {
+    direction: rtl;
+    font-family:"Rubik" , sans-serif ;
+    background-color: var(--main-color);
+}
+
+.container {
+    padding-left: 20px; 
+    padding-right: 15px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.border {
+    position: relative;
+}
+
+.border .the_p{
+    color: var(--second-color);
+    text-shadow: 4px 3px 1px black;
+    padding-top: 95px;
+    padding-right: 90px;
+
+}
+
+header {
+    border-bottom: solid 2px var(--second-color);
+    box-shadow: 0 0 4px black;
+    background-color: var(--main-color);
+    /* position: sticky;
+    top: 0; */
+}
+
+header .container{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+header .logo {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 40px;
+    transition: 0.4s;
+    font-weight: 800;
+}
+
+header .logo:hover {
+    color: #ACFD57;
+    text-shadow: 4px 3px 1px black;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding-right: 50px;
+    font-size: 17px;
+    transition: 0.3s;
+    position: relative;
+    font-weight: 600;
+}
+header ul li.about ,
+header ul li.experiences,
+header ul li.certificates,
+header ul li.communication {
+    position: relative;
+    
+}
+
+header ul li a:hover {
+
+    color: var(--second-color);
+    text-decoration: none;
+    padding-right: 50px;
+    text-shadow: 2px 2px 1px black;
+
+}
+
+header ul li.about::before {
+    border-radius: 20px;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--second-color);
+    position: absolute;
+    top: 26px;
+    left: 4px;
+    transition: 0.3s;
+}
+header ul li.about:hover::before {
+    width: 32px;
+}
+
+
+header ul li.experiences::before {
+    border-radius: 20px;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--second-color);
+    position: absolute;
+    top: 26px;
+    left: 9px;
+    transition: 0.3s;
+}
+header ul li.experiences:hover::before {
+    width: 37px;
+}
+
+
+
+header ul li.certificates::before {
+    border-radius: 20px;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--second-color);
+    position: absolute;
+    top: 26px;
+    left: 9px;
+    transition: 0.3s;
+}
+header ul li.certificates:hover::before {
+    width: 45px;
+}
+
+
+header ul li.communication::before {
+    border-radius: 20px;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--second-color);
+    position: absolute;
+    top: 26px;
+    left: 7px;
+    transition: 0.3s;
+}
+header ul li.communication:hover::before {
+    width: 34px;
+}
+
+header .links i {
+    display: none;
+    color: var(--text-color);
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .links i:hover {
+    color: var(--second-color);
+    text-shadow: 3px 3px 1px black;
+}
+
+@media (max-width:768px) {
+    header ul {
+        display: none;
+    }
+
+    header .links i {
+        display: block;
+    }
+}
+
+.about_class {
+    position: relative
+}
+
+.about_class .text {
+    position: relative;
+}
+
+.about_class .text h1 {
+    position:absolute ;
+    padding-top: 90px;
+    color: var(--text-color);
+    font-size: 80px;
+}
+
+.about_class .text h1 span {
+    color: var(--second-color);
+    text-shadow: 4px 3px 1px black;
+
+}
+
+@media (max-width:768px) {
+    .about_class .text h1 {
+        font-size: 45px;
+    }
+}
+
+.about_class .text h3 {
+
+    color: var(--text-color);
+    padding-top: 370px;
+    font-size: 30px;
+    position: absolute;
+    right: 35px;
+    font-weight: 700;
+}
+
+/* .about_class .text p span {
+    color: #ACFD57;
+    text-shadow: 2px 2px 1px black;
+    font-size: 40px;
+    position: relative;
+} */
+
+.about_class .text i {
+    text-shadow: 2px 2px 1px black;
+    font-size: 20px;
+    position: absolute;
+    right: -1px;
+    top: 256px;
+    padding-top: 130px;
+    color: var(--second-color);
+}
+
+.table_programmer {
+    padding-top: 450px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.table_programmer p  {
+    color: var(--text-color);
+    font-size: 9px;
+    text-align: center;
+    padding-bottom: 3px;
+    
+}
+
+.p_english {
+    font-family: "Nunito", sans-serif;
+}
+
+.table_programmer table {
+    /* background-color: var(--second-color); */
+    background-color: transparent;
+    box-shadow: 10px 10px 1px black;
+    margin-bottom: 15px;
+    /* margin-top: -10px; */
+    width: 100%;
+}
+
+.table_programmer table thead tr :first-child {
+    font-weight: 900;
+}
+
+.table_programmer table tr td {
+    border: solid black;
+    border-bottom:solid black ;
+    border-top:solid black ;
+    width: 300px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--text-color);
+    color: var(--main-color);
+
+}
+
+.table_programmer table .lan {
+    background-color: var(--second-color);
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+}
+
+.table_programmer thead tr td {
+    background-color: var(--second-color);
+    color: var(--main-color);
+    
+}
+
+.about_class .text_designer {
+    padding-top: 50px;
+    position: relative;
+}
+
+.about_class .text_designer h3 {
+    color: var(--text-color);
+    /* padding-top: 370px; */
+    font-size: 30px;
+    position: absolute;
+    right: 35px;
+    top: 135px;
+    font-weight: 700;
+}
+
+.about_class .text_designer i {
+    text-shadow: 2px 2px 1px black;
+    font-size: 20px;
+    padding-top: 100px;
+    color: var(--second-color);
+}
+
+.table_designer {
+    padding-top: 50px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.table_designer p  {
+    color: var(--text-color);
+    font-size: 9px;
+    text-align: center;
+    padding-bottom: 3px;
+    
+}
+
+.p_english {
+    font-family: "Nunito", sans-serif;
+}
+
+.table_designer table {
+    /* background-color: var(--second-color); */
+    background-color: transparent;
+    box-shadow: 10px 10px 1px black;
+    margin-bottom: 15px;
+    /* margin-top: -10px; */
+    width: 100%;
+}
+
+.table_designer table thead tr :first-child {
+    font-weight: 900;
+}
+
+.table_designer table tr td {
+    border: solid black;
+    border-bottom:solid black ;
+    border-top:solid black ;
+    width: 300px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--text-color);
+    color: var(--main-color);
+
+}
+
+.table_designer table .lan {
+    background-color: var(--second-color);
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+}
+
+.table_designer thead tr td {
+    background-color: var(--second-color);
+    color: var(--main-color);
+    
+}
+
+.about_class .text_student {
+    padding-top: 50px;
+    position: relative;
+}
+
+.about_class .text_student h3 {
+    color: var(--text-color);
+    /* padding-top: 370px; */
+    font-size: 30px;
+    position: absolute;
+    right: 35px;
+    top: 135px;
+    font-weight: 700;
+}
+
+.about_class .text_student i {
+    text-shadow: 2px 2px 1px black;
+    font-size: 20px;
+    padding-top: 100px;
+    color: var(--second-color);
+}
+
+.student {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.student img {
+    width: 300px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.student p  {
+    color: var(--text-color);
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 3px;
+    font-family: "Nunito", sans-serif;
+}
+
